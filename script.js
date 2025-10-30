@@ -139,6 +139,7 @@ function getBook(id) {
  * Brushing up for hands-on
  */
 
+/* --
 // De-Structuring Objects
 const { title, publicationDate, genres, pages } = getBook(5)
 
@@ -157,38 +158,42 @@ let y = 20
 ;[y, x] = [x, y]
 
 console.log(x, y)
-
+--*/
 /** 2. Spread Operator & Rest Operator */
 
 // Array: Adding more genres
-
+/* ---
 const updatedGenres = [...genres, 'epic fantasy']
 console.log(updatedGenres)
 
 // Objects:
 const updatedBook = { ...getBook(5), moviePulishedYear: 2001 }
 console.log(updatedBook)
+--- */
 
 /** 3. template literals: Let's summarize a book from books */
-
+/*---
 const lotr = getBook(1)
 let summaryBook1 = `${lotr.title} is a ${lotr.pages} pages book, published in the year ${
   lotr.publicationDate.split('-')[0]
 }`
 
 console.log(summaryBook1)
-
+---*/
 /** --- 4. ternery operator --- */
+
+/*---
 const totalPagesComparitor =
   lotr.pages > 1000 ? 'The book has more than a 1000 pages' : 'The book has less than a 1000 pages'
 
 console.log(totalPagesComparitor)
+---*/
 
-/** --- 5. Arrow function --- */
+/** --- 5. Arrow function
 const getYear = () => lotr.publicationDate.split('-')[0]
 console.log(`PublicationDate is: ${getYear()}`)
-
-/** --- 6. Short-Circuit Operator --- */
+--- */
+/** --- 6. Short-Circuit Operator
 
 console.log(true && 'A Truthy value!')
 console.log(
@@ -215,8 +220,8 @@ console.log(5 ?? 'Five')
 console.log(null ?? 'I am null, no data')
 console.log(undefined ?? 'I am undefined, no data')
 console.log('hello' ?? 'We are here! ')
-
-/** --- Optional Chaining --- */
+--- */
+/** --- Optional Chaining
 const book3 = getBook(3)
 
 console.log(book3)
@@ -226,3 +231,4 @@ function totalReviews() {
 
 console.log('Total Reviews:')
 console.log(totalReviews())
+--- */
