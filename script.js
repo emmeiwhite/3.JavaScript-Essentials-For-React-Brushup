@@ -232,3 +232,13 @@ function totalReviews() {
 console.log('Total Reviews:')
 console.log(totalReviews())
 --- */
+
+/** 1. map(): HOF which returns a new array with same number of elements with some operations performed - modified one! */
+const books = getBooks()
+const allIDs = books.map(book => book.id)
+const allTitles = books.map(book => book?.title ?? 'Default Title')
+const compactBooks = books.map(book => ({ title: book.title, author: book.author }))
+
+console.log(allIDs)
+console.log(allTitles)
+console.log(compactBooks)
