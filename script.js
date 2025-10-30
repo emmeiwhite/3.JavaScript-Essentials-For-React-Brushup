@@ -215,3 +215,14 @@ console.log(5 ?? 'Five')
 console.log(null ?? 'I am null, no data')
 console.log(undefined ?? 'I am undefined, no data')
 console.log('hello' ?? 'We are here! ')
+
+/** --- Optional Chaining --- */
+const book3 = getBook(3)
+
+console.log(book3)
+function totalReviews() {
+  return book3.reviews?.librarything?.reviewsCount ?? 0
+}
+
+console.log('Total Reviews:')
+console.log(totalReviews())
