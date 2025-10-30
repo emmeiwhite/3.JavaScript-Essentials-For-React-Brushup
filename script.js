@@ -296,3 +296,11 @@ console.log(arr)
 const booksSortedByPages = books.slice().sort((book1, book2) => book1.pages - book2.pages)
 console.log(booksSortedByPages)
 */
+
+/** Asynchronous JavaScript with Promises */
+
+fetch('https://jsonplaceholder.typicode.com/todos')
+  .then(res => res.json())
+  .then(data => console.log(data))
+
+console.log('I will run first, because I am a sync operations')
