@@ -140,11 +140,20 @@ function getBook(id) {
  */
 
 // De-Structuring Objects
-const { title, publicationDate, genres, pages } = getBook(4)
+const { title, publicationDate, genres, pages } = getBook(5)
 
 console.log(title, publicationDate, genres, pages)
 // De-Structuring Arrays: De-Structuring arrays works on the order of the array values
 
-const [firstArrElement, secondArrElement] = genres
+console.log(genres)
+const [firstArrElement, secondArrElement, ...restOfTheElements] = genres
 console.log(firstArrElement)
 console.log(secondArrElement)
+console.log(restOfTheElements)
+
+// Swap two numbers with Array De-structuring
+let x = 10
+let y = 20
+;[y, x] = [x, y]
+
+console.log(x, y)
