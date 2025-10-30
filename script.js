@@ -177,3 +177,9 @@ let summaryBook1 = `${lotr.title} is a ${lotr.pages} pages book, published in th
 }`
 
 console.log(summaryBook1)
+
+/** --- 4. ternery operator --- */
+const totalPagesComparitor =
+  lotr.pages > 1000 ? 'The book has more than a 1000 pages' : 'The book has less than a 1000 pages'
+
+console.log(totalPagesComparitor)
