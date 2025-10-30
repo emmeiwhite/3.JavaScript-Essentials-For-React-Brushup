@@ -131,5 +131,12 @@ function getBooks() {
 }
 
 function getBook(id) {
-  return data.find(book => book.id === id)
+  const book = data.find(book => book.id === id)
+  if (book != undefined) {
+    return book
+  } else {
+    return `No book found for the given id: ${id}`
+  }
 }
+
+console.log(getBook(59))
