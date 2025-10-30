@@ -143,3 +143,8 @@ function getBook(id) {
 const { title, publicationDate, genres, pages } = getBook(4)
 
 console.log(title, publicationDate, genres, pages)
+// De-Structuring Arrays: De-Structuring arrays works on the order of the array values
+
+const [firstArrElement, secondArrElement] = genres
+console.log(firstArrElement)
+console.log(secondArrElement)
