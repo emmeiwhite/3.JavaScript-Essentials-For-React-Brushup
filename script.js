@@ -185,6 +185,33 @@ const totalPagesComparitor =
 console.log(totalPagesComparitor)
 
 /** --- 5. Arrow function --- */
-
 const getYear = () => lotr.publicationDate.split('-')[0]
-console.log(`publicationDate is: ${getYear()}`)
+console.log(`PublicationDate is: ${getYear()}`)
+
+/** --- 6. Short-Circuit Operator --- */
+
+console.log(true && 'A Truthy value!')
+console.log(
+  false &&
+    'I can be any expresion, code block, even the whole appliction code but I will never get executed because of short-circuit'
+) // simply returns false
+console.log(0 && 'Where are you?') // returns the falsy value, 0 in this case
+
+console.log(undefined && 'Never will I executed') // returns undefined
+console.log(null && 'Never will I executed') // returns null
+
+// OR || works completely opposite of &: The first truthy value is returned
+
+console.log('|| operator returns first truthy value')
+console.log(true || 'hello world') // true is returned
+console.log('I am a truthy value' || 'I can be anything, but I will never ever be executed') // 'I am a truthy value' is returned!
+console.log(false || false) // last false is returned
+console.log(false || false || 'I am the who will be returned') // first truthy value
+console.log(false || 0 || '' || 'hi' || false) // The first truthy value is returned which is 'hi'
+
+// nullish coalescing operator, denoted by ?? is a logical operator that provides a way to handle null or undefined values in programming languages like JavaScript, TypeScript, and C#. It returns its right-hand side operand when its left-hand side operand is either null or undefined, and otherwise returns its left-hand operand.
+
+console.log(5 ?? 'Five')
+console.log(null ?? 'I am null, no data')
+console.log(undefined ?? 'I am undefined, no data')
+console.log('hello' ?? 'We are here! ')
