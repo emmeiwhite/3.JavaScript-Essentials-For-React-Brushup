@@ -270,3 +270,17 @@ const totalPages = books.reduce((acc, book) => {
 
 console.log(`All the pages counted from all the books combined are: ${totalPages}`)
 // Accumulator is like a pile on which we put more and more and more. An intermediary value on which we keep adding values until we get the result we are looking for.
+
+/** 4. sort() method: Now that sort() is mutable arr and the original method is affected, so we should adopt the habit of taking copy */
+
+// Basic example:
+const arr = [5, 23, 11, 2, 31, 7]
+console.log('Original Array:')
+console.log(arr)
+const sortedArr = arr.sort((a, b) => a - b)
+
+console.log('Sorted array is:')
+console.log(sortedArr)
+
+console.log('Original has also changed:')
+console.log(arr)
