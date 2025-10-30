@@ -135,6 +135,9 @@ function getBook(id) {
   }
 }
 
+console.log('All Books:')
+console.log(getBooks())
+
 /** 1. DeStructuring - Arrays and Objects
  * Brushing up for hands-on
  */
@@ -250,3 +253,8 @@ console.log(longBooks)
 
 const booksWithMovies = books.filter(book => book.hasMovieAdaptation && book.pages > 500)
 console.log(booksWithMovies)
+
+// Books with genre 'adventure' | includes() method is a perfect tool here
+const adventureBooks = books.filter(book => book.genres.includes('adventure'))
+console.log('Adventure Books are:')
+console.log(adventureBooks)
