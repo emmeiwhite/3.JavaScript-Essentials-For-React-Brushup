@@ -1,7 +1,3 @@
-/** 1. DeStructuring - Arrays and Objects
- * Brushing up for hands-on
- */
-
 const data = [
   {
     id: 1,
@@ -139,4 +135,11 @@ function getBook(id) {
   }
 }
 
-console.log(getBook(59))
+/** 1. DeStructuring - Arrays and Objects
+ * Brushing up for hands-on
+ */
+
+// De-Structuring Objects
+const { title, publicationDate, genres, pages } = getBook(4)
+
+console.log(title, publicationDate, genres, pages)
