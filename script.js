@@ -168,3 +168,12 @@ console.log(updatedGenres)
 // Objects:
 const updatedBook = { ...getBook(5), moviePulishedYear: 2001 }
 console.log(updatedBook)
+
+/** 3. template literals: Let's summarize a book from books */
+
+const lotr = getBook(1)
+let summaryBook1 = `${lotr.title} is a ${lotr.pages} pages book, published in the year ${
+  lotr.publicationDate.split('-')[0]
+}`
+
+console.log(summaryBook1)
