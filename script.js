@@ -284,3 +284,8 @@ console.log(sortedArr)
 
 console.log('Original has also changed:')
 console.log(arr)
+
+// UseCase: let's sort our books array by pages in the ascending order
+
+const booksSortedByPages = books.slice().sort((book1, book2) => book1.pages - book2.pages)
+console.log(booksSortedByPages)
