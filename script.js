@@ -157,3 +157,14 @@ let y = 20
 ;[y, x] = [x, y]
 
 console.log(x, y)
+
+/** 2. Spread Operator & Rest Operator */
+
+// Array: Adding more genres
+
+const updatedGenres = [...genres, 'epic fantasy']
+console.log(updatedGenres)
+
+// Objects:
+const updatedBook = { ...getBook(5), moviePulishedYear: 2001 }
+console.log(updatedBook)
