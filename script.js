@@ -236,7 +236,7 @@ console.log('Total Reviews:')
 console.log(totalReviews())
 --- */
 
-/** 1. map(): HOF which returns a new array with same number of elements with some operations performed - modified one! */
+/** 1. map(): HOF which returns a new array with same number of elements with some operations performed - modified one! 
 const books = getBooks()
 const allIDs = books.map(book => book.id)
 const allTitles = books.map(book => book?.title ?? 'Default Title')
@@ -246,7 +246,9 @@ console.log(allIDs)
 console.log(allTitles)
 console.log(compactBooks)
 
-/** 2. filter(): To filter out some of the elements of the array based on some condition */
+*/
+
+/** 2. filter(): To filter out some of the elements of the array based on some condition
 
 const longBooks = books.filter(book => book.pages > 500)
 console.log(longBooks)
@@ -259,19 +261,23 @@ const adventureBooks = books.filter(book => book.genres.includes('adventure'))
 console.log('Adventure Books are:')
 console.log(adventureBooks)
 
+ */
+
 /** 3. reduce(): As per the instructor, the reduce() method is the most versatile and the powerful method in the whole JavaScript, since we can perform a lots of stuff by just one reduce method:
  *
  * UseCase: Assume we want to know all the pages in all the books and plan reading all the books accordingly and plan accordingly
- */
+
 
 const totalPages = books.reduce((acc, book) => {
   return (acc = acc + book.pages)
 }, 0)
 
 console.log(`All the pages counted from all the books combined are: ${totalPages}`)
+
+ */
 // Accumulator is like a pile on which we put more and more and more. An intermediary value on which we keep adding values until we get the result we are looking for.
 
-/** 4. sort() method: Now that sort() is mutable arr and the original method is affected, so we should adopt the habit of taking copy */
+/** 4. sort() method: Now that sort() is mutable arr and the original method is affected, so we should adopt the habit of taking copy 
 
 // Basic example:
 const arr = [5, 23, 11, 2, 31, 7]
@@ -289,3 +295,4 @@ console.log(arr)
 
 const booksSortedByPages = books.slice().sort((book1, book2) => book1.pages - book2.pages)
 console.log(booksSortedByPages)
+*/
