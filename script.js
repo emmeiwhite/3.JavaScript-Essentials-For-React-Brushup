@@ -183,3 +183,8 @@ const totalPagesComparitor =
   lotr.pages > 1000 ? 'The book has more than a 1000 pages' : 'The book has less than a 1000 pages'
 
 console.log(totalPagesComparitor)
+
+/** --- 5. Arrow function --- */
+
+const getYear = () => lotr.publicationDate.split('-')[0]
+console.log(`publicationDate is: ${getYear()}`)
