@@ -258,3 +258,15 @@ console.log(booksWithMovies)
 const adventureBooks = books.filter(book => book.genres.includes('adventure'))
 console.log('Adventure Books are:')
 console.log(adventureBooks)
+
+/** 3. reduce(): As per the instructor, the reduce() method is the most versatile and the powerful method in the whole JavaScript, since we can perform a lots of stuff by just one reduce method:
+ *
+ * UseCase: Assume we want to know all the pages in all the books and plan reading all the books accordingly and plan accordingly
+ */
+
+const totalPages = books.reduce((acc, book) => {
+  return (acc = acc + book.pages)
+}, 0)
+
+console.log(`All the pages counted from all the books combined are: ${totalPages}`)
+// Accumulator is like a pile on which we put more and more and more. An intermediary value on which we keep adding values until we get the result we are looking for.
