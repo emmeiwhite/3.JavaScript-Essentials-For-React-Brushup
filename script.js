@@ -53,7 +53,7 @@ const data = [
     publicationDate: '1965-01-01',
     author: 'Frank Herbert',
     genres: ['science fiction', 'novel', 'adventure'],
-    hasMovieAdaptation: true,
+    hasMovieAdaptation: false,
     pages: 658,
     translations: {
       spanish: ''
@@ -242,3 +242,11 @@ const compactBooks = books.map(book => ({ title: book.title, author: book.author
 console.log(allIDs)
 console.log(allTitles)
 console.log(compactBooks)
+
+/** 2. filter(): To filter out some of the elements of the array based on some condition */
+
+const longBooks = books.filter(book => book.pages > 500)
+console.log(longBooks)
+
+const booksWithMovies = books.filter(book => book.hasMovieAdaptation && book.pages > 500)
+console.log(booksWithMovies)
