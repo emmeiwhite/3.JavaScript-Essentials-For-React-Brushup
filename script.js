@@ -304,3 +304,15 @@ fetch('https://jsonplaceholder.typicode.com/todos')
   .then(data => console.log(data))
 
 console.log('I will run first, because I am a sync operations')
+
+/** async-await */
+
+async function getTodods() {
+  const response = await fetch('https://jsonplaceholder.typicode.com/todos')
+  const data = await response.json()
+
+  return data
+}
+
+getTodods().then(data => console.log(data))
+console.log('I am synchronous code')
